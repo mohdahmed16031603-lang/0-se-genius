@@ -3,12 +3,14 @@
 <head>
   <title>0 Se Genius</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background: #f4f7ff;
       text-align: center;
+      color: #172033;
     }
 
     header {
@@ -17,8 +19,9 @@
       padding: 50px 20px;
     }
 
-    h1 {
+    header h1 {
       font-size: 40px;
+      margin: 0 0 10px;
     }
 
     .box {
@@ -26,15 +29,30 @@
       margin: 25px 15px;
       padding: 25px;
       border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
-    button {
+    .contact {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
       background: #16a34a;
       color: white;
-      border: 0;
+      text-decoration: none;
       padding: 14px 25px;
       border-radius: 8px;
-      font-size: 16px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #172554;
+      color: white;
+      padding: 25px;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -48,8 +66,8 @@
 </header>
 
 <div class="box">
-  <h2>Our Courses</h2>
-  <p>📚 English</p>
+  <h2>📚 Our Courses</h2>
+  <p>📖 English</p>
   <p>🔬 Science</p>
   <p>➗ Mathematics</p>
   <p>💻 Computer</p>
@@ -57,17 +75,38 @@
 </div>
 
 <div class="box">
-  <h2>Student Admission</h2>
+  <h2>📝 Student Admission</h2>
   <p>Admissions are open!</p>
-  <button>Register Now</button>
+  <p>Contact us for admission information.</p>
+
+  <a class="button"
+     href="https://wa.me/917300927053?text=Hello%20I%20want%20information%20about%200%20Se%20Genius%20admission."
+     target="_blank">
+     WhatsApp for Admission
+  </a>
 </div>
 
 <div class="box">
-  <h2>Contact Us</h2>
-  <p>📞 Contact 0 Se Genius</p>
+  <h2>📞 Contact Us</h2>
+
+  <p class="contact">7300927053</p>
+
+  <a class="button" href="tel:7300927053">
+    Call Now
+  </a>
+
+  <br>
+
+  <a class="button"
+     href="https://wa.me/917300927053"
+     target="_blank">
+     WhatsApp Us
+  </a>
 </div>
 
 <footer>
+  <h3>0 Se Genius</h3>
+  <p>Learn • Practice • Grow</p>
   <p>© 2026 0 Se Genius</p>
 </footer>
 
