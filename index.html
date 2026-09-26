@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>0 Se Genius | Coaching Classes</title>
 
 <style>
 *{box-sizing:border-box;scroll-behavior:smooth}
 body{margin:0;font-family:Arial,sans-serif;background:#f4f7ff;color:#172033}
-nav{background:#172554;padding:15px;text-align:center;position:sticky;top:0;z-index:10}
-nav a{color:white;text-decoration:none;margin:0 7px;font-size:14px;font-weight:bold}
-.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;text-align:center;padding:60px 20px}
+nav{background:#172554;padding:15px;text-align:center;position:sticky;top:0;z-index:100}
+nav a{color:#fff;text-decoration:none;margin:0 6px;font-size:14px;font-weight:bold}
+.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;text-align:center;padding:65px 20px}
 .hero h1{font-size:42px;margin:0 0 10px}
 .container{max-width:1000px;margin:auto;padding:30px 18px}
 .title{text-align:center;color:#1e3a8a}
-.card,.form,.records{background:white;padding:25px;border-radius:15px;margin:20px 0;box-shadow:0 4px 15px #00000012}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:15px}
+.card,.form,.records{background:#fff;padding:24px;border-radius:15px;margin:20px 0;box-shadow:0 4px 15px #0001}
 .card{text-align:center}
-label{display:block;font-weight:bold;margin-top:10px}
+label{display:block;font-weight:bold;text-align:left;margin-top:10px}
 input,select{width:100%;padding:13px;margin:7px 0 12px;border:1px solid #ccd2df;border-radius:8px;font-size:16px}
-button,.btn{display:inline-block;width:100%;padding:13px;background:#16a34a;color:white;border:0;border-radius:8px;font-size:16px;font-weight:bold;text-decoration:none;text-align:center;margin-top:8px}
-.success{display:none;background:#dcfce7;color:#166534;padding:20px;border-radius:10px;margin-top:15px}
-.search{margin-bottom:20px}
-.student{border:1px solid #ddd;padding:15px;border-radius:10px;margin:12px 0}
-.delete{background:#dc2626}
-.whatsapp{background:#16a34a}
-footer{background:#172554;color:white;text-align:center;padding:25px;margin-top:30px}
+button,.btn{display:inline-block;width:100%;padding:13px;background:#16a34a;color:#fff;border:0;border-radius:8px;font-size:16px;font-weight:bold;text-align:center;text-decoration:none;margin-top:8px}
+.red{background:#dc2626}
+.blue{background:#2563eb}
+.success{display:none;background:#dcfce7;color:#166534;padding:20px;border-radius:10px;margin-top:15px;text-align:center}
+.student{border:1px solid #ddd;padding:16px;border-radius:10px;margin:12px 0}
+.adminBox{display:none}
+footer{background:#172554;color:#fff;text-align:center;padding:25px;margin-top:30px}
+.small{font-size:13px;color:#555}
 </style>
 </head>
 
@@ -36,6 +37,7 @@ footer{background:#172554;color:white;text-align:center;padding:25px;margin-top:
 <a href="#courses">Courses</a>
 <a href="#admission">Admission</a>
 <a href="#records">Records</a>
+<a href="#admin">Admin</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -67,33 +69,22 @@ footer{background:#172554;color:white;text-align:center;padding:25px;margin-top:
 <form id="registrationForm">
 
 <label>Student Name</label>
-<input id="studentName" type="text" placeholder="Enter student name" required>
+<input id="studentName" required>
 
 <label>Father's Name</label>
-<input id="fatherName" type="text" placeholder="Enter father's name" required>
+<input id="fatherName" required>
 
 <label>Mobile Number</label>
-<input id="mobile" type="tel" placeholder="10 digit mobile number"
-pattern="[0-9]{10}" maxlength="10" required>
+<input id="mobile" type="tel" maxlength="10" pattern="[0-9]{10}" required>
 
 <label>Class</label>
 <select id="studentClass" required>
 <option value="">Select Class</option>
-<option>Nursery</option>
-<option>LKG</option>
-<option>UKG</option>
-<option>1st</option>
-<option>2nd</option>
-<option>3rd</option>
-<option>4th</option>
-<option>5th</option>
-<option>6th</option>
-<option>7th</option>
-<option>8th</option>
-<option>9th</option>
-<option>10th</option>
-<option>11th</option>
-<option>12th</option>
+<option>Nursery</option><option>LKG</option><option>UKG</option>
+<option>1st</option><option>2nd</option><option>3rd</option>
+<option>4th</option><option>5th</option><option>6th</option>
+<option>7th</option><option>8th</option><option>9th</option>
+<option>10th</option><option>11th</option><option>12th</option>
 </select>
 
 <label>Course</label>
@@ -108,16 +99,12 @@ pattern="[0-9]{10}" maxlength="10" required>
 </select>
 
 <button type="submit">Register Now</button>
-
 </form>
 
-<div class="success" id="successMessage">
+<div class="success" id="success">
 <h2>🎉 Registration Successful!</h2>
-<p>Registration ID: <b id="registrationId"></b></p>
-<p>Please save your Registration ID.</p>
-<a id="whatsappButton" class="btn whatsapp" target="_blank">
-Send Registration on WhatsApp
-</a>
+<p>Registration ID: <b id="newID"></b></p>
+<a id="newWhatsApp" class="btn" target="_blank">💬 Send Details on WhatsApp</a>
 </div>
 
 </div>
@@ -129,17 +116,47 @@ Send Registration on WhatsApp
 
 <div class="records">
 
-<input
-class="search"
-id="searchStudent"
-type="text"
-placeholder="🔎 Search by name or Registration ID"
-oninput="showRecords()"
->
+<p class="small">
+Records are available after Admin Login.
+</p>
+
+<input id="search" placeholder="🔎 Search name or Registration ID"
+oninput="showRecords()">
 
 <div id="studentList"></div>
 
 </div>
+</section>
+
+<section class="container" id="admin">
+
+<h2 class="title">🔐 Admin Panel</h2>
+
+<div class="form" id="loginBox">
+
+<label>Admin Password</label>
+<input id="password" type="password" placeholder="Enter password">
+
+<button onclick="login()">Login</button>
+
+<p class="small">
+Default password: <b>admin123</b>
+</p>
+
+</div>
+
+<div class="form adminBox" id="adminPanel">
+
+<h2>Admin Dashboard</h2>
+
+<p><b>Total Students:</b> <span id="total">0</span></p>
+
+<button class="blue" onclick="window.print()">🖨️ Print Page</button>
+
+<button class="red" onclick="logout()">Logout</button>
+
+</div>
+
 </section>
 
 <section class="container" id="contact">
@@ -147,19 +164,16 @@ oninput="showRecords()"
 <h2 class="title">📞 Contact Us</h2>
 
 <div class="card">
-<p>For admission and information:</p>
 
 <h2>7300927053</h2>
 
 <a class="btn" href="tel:7300927053">📞 Call Now</a>
 
-<a class="btn whatsapp"
-href="https://wa.me/917300927053"
-target="_blank">
+<a class="btn" href="https://wa.me/917300927053" target="_blank">
 💬 WhatsApp Us
 </a>
-</div>
 
+</div>
 </section>
 
 <footer>
@@ -170,26 +184,19 @@ target="_blank">
 
 <script>
 
-function getStudents(){
-return JSON.parse(localStorage.getItem("students") || "[]");
-}
+let students=JSON.parse(localStorage.getItem("students")||"[]");
 
-function saveStudents(students){
+function save(){
 localStorage.setItem("students",JSON.stringify(students));
 }
 
-function getNextId(){
+function nextID(){
 
-let number=parseInt(
-localStorage.getItem("nextRegistrationNumber") || "1"
-);
+let n=parseInt(localStorage.getItem("nextID")||"1");
 
-localStorage.setItem(
-"nextRegistrationNumber",
-number+1
-);
+localStorage.setItem("nextID",n+1);
 
-return "0SG-" + String(number).padStart(5,"0");
+return "0SG-"+String(n).padStart(5,"0");
 }
 
 document.getElementById("registrationForm")
@@ -198,23 +205,20 @@ document.getElementById("registrationForm")
 e.preventDefault();
 
 let student={
-id:getNextId(),
-name:document.getElementById("studentName").value.trim(),
-father:document.getElementById("fatherName").value.trim(),
-mobile:document.getElementById("mobile").value.trim(),
-studentClass:document.getElementById("studentClass").value,
-course:document.getElementById("course").value
+id:nextID(),
+name:studentName.value.trim(),
+father:fatherName.value.trim(),
+mobile:mobile.value.trim(),
+studentClass:studentClass.value,
+course:course.value
 };
 
-let students=getStudents();
-
 students.push(student);
+save();
 
-saveStudents(students);
+newID.textContent=student.id;
 
-document.getElementById("registrationId").textContent=student.id;
-
-let message=
+let msg=
 "Hello 0 Se Genius,%0A%0A"+
 "New Student Registration%0A%0A"+
 "Registration ID: "+student.id+"%0A"+
@@ -224,10 +228,10 @@ let message=
 "Class: "+student.studentClass+"%0A"+
 "Course: "+student.course;
 
-document.getElementById("whatsappButton").href=
-"https://wa.me/917300927053?text="+message;
+newWhatsApp.href=
+"https://wa.me/917300927053?text="+msg;
 
-document.getElementById("successMessage").style.display="block";
+document.getElementById("success").style.display="block";
 
 this.reset();
 
@@ -235,61 +239,85 @@ showRecords();
 
 });
 
+function login(){
+
+let pass=document.getElementById("password").value;
+
+if(pass==="admin123"){
+
+document.getElementById("loginBox").style.display="none";
+document.getElementById("adminPanel").style.display="block";
+
+showRecords();
+
+alert("Admin Login Successful ✅");
+
+}else{
+
+alert("Wrong Password ❌");
+
+}
+
+}
+
+function logout(){
+
+document.getElementById("loginBox").style.display="block";
+document.getElementById("adminPanel").style.display="none";
+document.getElementById("password").value="";
+
+}
+
 function showRecords(){
-
-let students=getStudents();
-
-let search=document.getElementById("searchStudent")
-.value.toLowerCase();
 
 let list=document.getElementById("studentList");
 
-let filtered=students.filter(function(s){
+let search=document.getElementById("search").value.toLowerCase();
 
-return s.name.toLowerCase().includes(search) ||
-s.id.toLowerCase().includes(search);
+let filtered=students.filter(s=>
+s.name.toLowerCase().includes(search) ||
+s.id.toLowerCase().includes(search)
+);
 
-});
+document.getElementById("total").textContent=students.length;
 
 if(filtered.length===0){
 
-list.innerHTML="<p>No student record found.</p>";
+list.innerHTML="<p>No student records found.</p>";
 return;
 
 }
 
-list.innerHTML=filtered.map(function(s){
+list.innerHTML=filtered.map(s=>`
 
-return `
 <div class="student">
 
 <h3>🆔 ${s.id}</h3>
 
 <p><b>Student:</b> ${s.name}</p>
-
 <p><b>Father:</b> ${s.father}</p>
-
 <p><b>Mobile:</b> ${s.mobile}</p>
-
 <p><b>Class:</b> ${s.studentClass}</p>
-
 <p><b>Course:</b> ${s.course}</p>
 
-<a class="btn whatsapp"
-href="https://wa.me/91${s.mobile}?text=Hello%20${encodeURIComponent(s.name)},%20your%20registration%20with%200%20Se%20Genius%20is%20successful.%20Registration%20ID:%20${s.id}"
-target="_blank">
-💬 WhatsApp Student
-</a>
+<button class="blue"
+onclick="editStudent('${s.id}')">
+✏️ Edit
+</button>
 
-<button class="delete"
+<button
+onclick="printStudent('${s.id}')">
+🖨️ Print
+</button>
+
+<button class="red"
 onclick="deleteStudent('${s.id}')">
-🗑️ Delete Record
+🗑️ Delete
 </button>
 
 </div>
-`;
 
-}).join("");
+`).join("");
 
 }
 
@@ -297,17 +325,88 @@ function deleteStudent(id){
 
 if(confirm("Delete this student record?")){
 
-let students=getStudents();
+students=students.filter(s=>s.id!==id);
 
-students=students.filter(function(s){
-return s.id!==id;
-});
-
-saveStudents(students);
+save();
 
 showRecords();
 
 }
+
+}
+
+function editStudent(id){
+
+let s=students.find(x=>x.id===id);
+
+if(!s)return;
+
+let name=prompt("Student Name:",s.name);
+if(name===null)return;
+
+let father=prompt("Father's Name:",s.father);
+if(father===null)return;
+
+let mobile=prompt("Mobile Number:",s.mobile);
+if(mobile===null)return;
+
+s.name=name;
+s.father=father;
+s.mobile=mobile;
+
+save();
+showRecords();
+
+alert("Record Updated ✅");
+
+}
+
+function printStudent(id){
+
+let s=students.find(x=>x.id===id);
+
+if(!s)return;
+
+let w=window.open("","_blank");
+
+w.document.write(`
+<html>
+<head>
+<title>Student Record ${s.id}</title>
+<style>
+body{font-family:Arial;padding:30px}
+h1{text-align:center}
+.box{border:1px solid #333;padding:20px;margin-top:20px}
+p{font-size:18px}
+</style>
+</head>
+
+<body>
+
+<h1>0 Se Genius</h1>
+
+<h2>Student Registration Record</h2>
+
+<div class="box">
+
+<p><b>Registration ID:</b> ${s.id}</p>
+<p><b>Student Name:</b> ${s.name}</p>
+<p><b>Father's Name:</b> ${s.father}</p>
+<p><b>Mobile:</b> ${s.mobile}</p>
+<p><b>Class:</b> ${s.studentClass}</p>
+<p><b>Course:</b> ${s.course}</p>
+
+</div>
+
+<script>
+window.print();
+<\/script>
+
+</body>
+</html>
+`);
+
+w.document.close();
 
 }
 
