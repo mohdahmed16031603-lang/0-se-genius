@@ -1,274 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>0 Se Genius</title>
+  <title>0 Se Genius</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f4f7ff;
+      text-align: center;
+    }
 
-<style>
-*{box-sizing:border-box;scroll-behavior:smooth}
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 50px 20px;
+    }
 
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f4f7ff;
-  color:#172033;
-}
+    h1 {
+      font-size: 40px;
+    }
 
-nav{
-  background:#172554;
-  padding:15px 8px;
-  text-align:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
+    .box {
+      background: white;
+      margin: 25px 15px;
+      padding: 25px;
+      border-radius: 15px;
+    }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin:0 7px;
-  font-size:14px;
-  font-weight:bold;
-}
-
-.hero{
-  background:linear-gradient(135deg,#1e3a8a,#2563eb);
-  color:white;
-  text-align:center;
-  padding:70px 20px;
-}
-
-.hero h1{
-  font-size:42px;
-  margin:0 0 12px;
-}
-
-.hero p{
-  font-size:19px;
-}
-
-.btn{
-  display:inline-block;
-  background:#16a34a;
-  color:white;
-  padding:14px 24px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:15px;
-}
-
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:35px 18px;
-}
-
-.title{
-  text-align:center;
-  color:#1e3a8a;
-  font-size:30px;
-  margin-bottom:25px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:18px;
-}
-
-.card{
-  background:white;
-  padding:24px;
-  border-radius:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
-  text-align:center;
-}
-
-.card h3{
-  color:#1e3a8a;
-}
-
-.form{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
-  max-width:650px;
-  margin:auto;
-}
-
-input,select{
-  width:100%;
-  padding:13px;
-  margin:8px 0 15px;
-  border:1px solid #ccd2df;
-  border-radius:8px;
-  font-size:16px;
-}
-
-label{
-  font-weight:bold;
-}
-
-button{
-  width:100%;
-  padding:14px;
-  background:#16a34a;
-  color:white;
-  border:0;
-  border-radius:9px;
-  font-size:17px;
-  font-weight:bold;
-}
-
-footer{
-  background:#172554;
-  color:white;
-  text-align:center;
-  padding:25px;
-  margin-top:30px;
-}
-</style>
+    button {
+      background: #16a34a;
+      color: white;
+      border: 0;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#courses">Courses</a>
-<a href="#about">About</a>
-<a href="#admission">Admission</a>
-<a href="#contact">Contact</a>
-</nav>
+<header>
+  <h1>0 Se Genius</h1>
+  <p>Welcome to 0 Se Genius 🚀</p>
+  <p>Learn • Practice • Grow</p>
+</header>
 
-<section class="hero" id="home">
-<h1>0 Se Genius</h1>
-<p>Welcome to 0 Se Genius 🚀</p>
-<p>Learn • Practice • Grow</p>
-<a class="btn" href="#admission">Start Admission</a>
-</section>
-
-<section class="container" id="courses">
-<h2 class="title">Our Courses</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>📚 English</h3>
-<p>Grammar, Reading & Speaking</p>
+<div class="box">
+  <h2>Our Courses</h2>
+  <p>📚 English</p>
+  <p>🔬 Science</p>
+  <p>➗ Mathematics</p>
+  <p>💻 Computer</p>
+  <p>🌍 General Knowledge</p>
 </div>
 
-<div class="card">
-<h3>🔬 Science</h3>
-<p>Physics, Chemistry & Biology</p>
+<div class="box">
+  <h2>Student Admission</h2>
+  <p>Admissions are open!</p>
+  <button>Register Now</button>
 </div>
 
-<div class="card">
-<h3>➗ Mathematics</h3>
-<p>Concepts & Problem Solving</p>
+<div class="box">
+  <h2>Contact Us</h2>
+  <p>📞 Contact 0 Se Genius</p>
 </div>
-
-<div class="card">
-<h3>💻 Computer</h3>
-<p>Computer & Digital Skills</p>
-</div>
-
-<div class="card">
-<h3>🌍 GK</h3>
-<p>General Knowledge</p>
-</div>
-
-<div class="card">
-<h3>🏆 Competitive Exams</h3>
-<p>Exam Preparation & Practice</p>
-</div>
-
-</div>
-</section>
-
-<section class="container" id="about">
-<h2 class="title">About 0 Se Genius</h2>
-
-<div class="card">
-<p>
-Welcome to <b>0 Se Genius</b>.
-Our aim is to help students learn from basic concepts
-and improve their knowledge step by step.
-</p>
-
-<p>
-Learn from zero and become a genius with regular practice,
-guidance and confidence.
-</p>
-</div>
-</section>
-
-<section class="container" id="admission">
-<h2 class="title">Student Admission</h2>
-
-<div class="form">
-
-<label>Student Name</label>
-<input type="text" placeholder="Enter student name">
-
-<label>Father's Name</label>
-<input type="text" placeholder="Enter father's name">
-
-<label>Class</label>
-<select>
-<option>Select Class</option>
-<option>Nursery</option>
-<option>LKG</option>
-<option>UKG</option>
-<option>1st</option>
-<option>2nd</option>
-<option>3rd</option>
-<option>4th</option>
-<option>5th</option>
-<option>6th</option>
-<option>7th</option>
-<option>8th</option>
-<option>9th</option>
-<option>10th</option>
-<option>11th</option>
-<option>12th</option>
-</select>
-
-<label>Mobile Number</label>
-<input type="tel" placeholder="Enter mobile number">
-
-<label>Course</label>
-<select>
-<option>Select Course</option>
-<option>English</option>
-<option>Science</option>
-<option>Mathematics</option>
-<option>Computer</option>
-<option>GK</option>
-<option>Competitive Exam</option>
-</select>
-
-<button>Submit Admission</button>
-
-</div>
-</section>
-
-<section class="container" id="contact">
-<h2 class="title">Contact Us</h2>
-
-<div class="card">
-<h3>📞 Admission Help</h3>
-<p>Contact 0 Se Genius for admission information.</p>
-<a class="btn" href="#">WhatsApp Us</a>
-</div>
-</section>
 
 <footer>
-<h3>0 Se Genius</h3>
-<p>Learn • Practice • Grow</p>
-<p>© 2026 0 Se Genius</p>
+  <p>© 2026 0 Se Genius</p>
 </footer>
 
 </body>
