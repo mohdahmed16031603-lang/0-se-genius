@@ -1,116 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>0 Se Genius</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #222;
-    }
+<title>0 Se Genius | Coaching Classes</title>
 
-    header {
-      background: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 35px 15px;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f5f7ff;
+  color:#172033;
+}
 
-    header p {
-      font-size: 18px;
-    }
+nav{
+  background:#172554;
+  padding:16px 12px;
+  position:sticky;
+  top:0;
+  z-index:10;
+  text-align:center;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 25px;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+  font-weight:bold;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      margin: 18px 0;
-      border-radius: 15px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-    }
+.hero{
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  color:white;
+  text-align:center;
+  padding:70px 20px;
+}
 
-    .card h2 {
-      color: #1e3a8a;
-    }
+.hero h1{
+  font-size:42px;
+  margin:0 0 10px;
+}
 
-    .button {
-      display: inline-block;
-      background: #16a34a;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
+.hero p{
+  font-size:19px;
+  margin:10px;
+}
 
-    footer {
-      background: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
-    }
-  </style>
+.btn{
+  display:inline-block;
+  background:#16a34a;
+  color:white;
+  padding:14px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:20px;
+  border:0;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:35px 18px;
+}
+
+.section-title{
+  text-align:center;
+  color:#1e3a8a;
+  font-size:30px;
+  margin-bottom:25px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:white;
+  padding:24px;
+  border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.card h3{
+  color:#1e3a8a;
+}
+
+.form-box{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  max-width:650px;
+  margin:auto;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  margin:8px 0 15px;
+  border:1px solid #ccd2df;
+  border-radius:8px;
+  font-size:16px;
+}
+
+label{
+  font-weight:bold;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  background:#16a34a;
+  color:white;
+  border:0;
+  border-radius:9px;
+  font-size:17px;
+  font-weight:bold;
+}
+
+.about{
+  background:white;
+  border-radius:15px;
+  padding:25px;
+  line-height:1.7;
+}
+
+footer{
+  background:#172554;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+  margin-top:30px;
+}
+
+.whatsapp{
+  background:#16a34a;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>0 Se Genius</h1>
-    <p>Welcome to 0 Se Genius 🚀</p>
-    <p>Learn • Practice • Grow</p>
-  </header>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#courses">Courses</a>
+  <a href="#about">About</a>
+  <a href="#register">Admission</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <div class="container">
+<section class="hero" id="home">
+  <h1>0 Se Genius</h1>
+  <p>Welcome to 0 Se Genius 🚀</p>
+  <p>Learn • Practice • Grow</p>
+
+  <a class="btn" href="#register">Start Admission</a>
+</section>
+
+<section class="container" id="courses">
+
+  <h2 class="section-title">Our Courses</h2>
+
+  <div class="cards">
 
     <div class="card">
-      <h2>About Us</h2>
-      <p>
-        Welcome to 0 Se Genius. 
-        We help students learn, practice and achieve their goals.
-      </p>
+      <h3>📚 English</h3>
+      <p>Grammar, Reading, Speaking & Communication</p>
     </div>
 
     <div class="card">
-      <h2>Our Courses</h2>
-      <p>📚 English</p>
-      <p>🔬 Science</p>
-      <p>➗ Mathematics</p>
-      <p>💻 Computer</p>
-      <p>🌍 General Knowledge</p>
+      <h3>🔬 Science</h3>
+      <p>Physics, Chemistry & Biology basics</p>
     </div>
 
     <div class="card">
-      <h2>Student Registration</h2>
-      <p>Join 0 Se Genius and start your learning journey.</p>
-      <a class="button" href="#">Register Now</a>
+      <h3>➗ Mathematics</h3>
+      <p>Concepts, Practice & Problem Solving</p>
     </div>
 
     <div class="card">
-      <h2>Contact Us</h2>
-      <p>📱 Contact: Add your mobile number</p>
-      <p>📍 Location: Add your coaching address</p>
+      <h3>💻 Computer</h3>
+      <p>Computer fundamentals and digital skills</p>
+    </div>
+
+    <div class="card">
+      <h3>🌍 GK</h3>
+      <p>General Knowledge and current awareness</p>
+    </div>
+
+    <div class="card">
+      <h3>🏆 Competitive Exams</h3>
+      <p>Practice and preparation for competitions</p>
     </div>
 
   </div>
 
-  <footer>
-    © 2026 0 Se Genius | All Rights Reserved
-  </footer>
+</section>
+
+<section class="container" id="about">
+
+  <h2 class="section-title">About 0 Se Genius</h2>
+
+  <div class="about">
+    <p>
+      Welcome to <b>0 Se Genius</b>.
+      Our aim is to help students learn from basic concepts
+      and improve their knowledge step by step.
+    </p>
+
+    <p>
+      We focus on learning, regular practice and confidence.
+      Every student can learn and grow with the right guidance.
+    </p>
+  </div>
+
+</section>
+
+<section class="container" id="register">
+
+  <h2 class="section-title">Student Admission</h2>
+
+  <div class="form-box">
+
+    <form onsubmit="sendWhatsApp(); return false;">
+
+      <label>Student Name</label>
+      <input id="studentName" type="text" placeholder="Enter student name" required>
+
+      <label>Father's Name</label>
+      <input id="fatherName" type="text" placeholder="Enter father's name" required>
+
+      <label>Class</label>
+      <select id="studentClass" required>
+        <option value="">Select Class</option>
+        <option>Nursery</option>
+        <option>LKG</option>
+        <option>UKG</option>
+        <option>1st</option>
+        <option>2nd</option>
+        <option>3rd</option>
+        <option>4th</option>
+        <option>5th</option>
+        <option>6th</option>
+        <option>7th</option>
+        <option>8th</option>
+        <option>9th</option>
+        <option>10th</option>
+        <option>11th</option>
+        <option>12th</option>
+      </select>
+
+      <label>Mobile Number</label>
+      <input id="mobile" type="tel" placeholder="Enter mobile number" required>
+
+      <label>Course</label>
+      <select id="course" required>
+        <option value="">Select Course</option>
+        <option>English</option>
+        <option>Science</option>
+        <option>Mathematics</option>
+        <option>Computer</option>
+        <option>GK</option>
+        <option>Competitive Exam</option>
+      </select>
+
+      <button type="submit">
+        Submit Admission
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<section class="container" id="contact">
+
+  <h2 class="section-title">Contact Us</h2>
+
+  <div class="card">
+
+    <h3>📱 Admission Help</h3>
+
+    <p>
+      Click below to send your admission details on WhatsApp.
+    </p>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/"
+       target="_blank">
+       WhatsApp Us
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <h3>0 Se Genius</h3>
+
+  <p>Learn • Practice • Grow</p>
+
+  <p>© 2026 0 Se Genius. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function sendWhatsApp(){
+
+  let name =
+  document.getElementById("studentName").value;
+
+  let father =
+  document.getElementById("fatherName").value;
+
+  let studentClass =
+  document.getElementById("studentClass").value;
+
+  let mobile =
+  document.getElementById("mobile").value;
+
+  let course =
+  document.getElementById("course").value;
+
+  let message =
+  "0 Se Genius Admission%0A%0A" +
+  "Student Name: " + name + "%0A" +
+  "Father's Name: " + father + "%0A" +
+  "Class: " + studentClass + "%0A" +
+  "Mobile: " + mobile + "%0A" +
+  "Course: " + course;
+
+  window.open(
+    "https://wa.me/?text=" + message,
+    "_blank"
+  );
+}
+
+</script>
 
 </body>
 </html>
